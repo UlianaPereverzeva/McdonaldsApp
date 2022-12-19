@@ -17,6 +17,7 @@ class MenuTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.rightBarButtonItem = self.editButtonItem
+        navigationController?.navigationBar.tintColor = UIColor(red: 1.00, green: 0.79, blue: 0.38, alpha: 1.00).withAlphaComponent(1)
     }
 
     // MARK: - Table view data source

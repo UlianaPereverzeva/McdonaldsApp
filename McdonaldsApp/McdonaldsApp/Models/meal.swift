@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 struct NameOfSection {
-    let burgers: [Meal]
-    let frenchFries: [Meal]
-    let drinks: [Meal]
+    var burgers: [Meal]
+    var frenchFries: [Meal]
+    var drinks: [Meal]
 }
 
 struct Meal {

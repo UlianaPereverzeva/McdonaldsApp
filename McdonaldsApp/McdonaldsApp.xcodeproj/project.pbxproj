@@ -21,6 +21,7 @@
 		85950D7E294A7BD600A41012 /* MealsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85950D7D294A7BD600A41012 /* MealsData.swift */; };
 		85950D80294B3BF900A41012 /* CreateFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85950D7F294B3BF900A41012 /* CreateFeedbackViewController.swift */; };
 		85CB253D294CB1AC00C10292 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB253C294CB1AC00C10292 /* CellManager.swift */; };
+		85CB253F29506AB500C10292 /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB253E29506AB500C10292 /* ReviewsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		85950D7D294A7BD600A41012 /* MealsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsData.swift; sourceTree = "<group>"; };
 		85950D7F294B3BF900A41012 /* CreateFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFeedbackViewController.swift; sourceTree = "<group>"; };
 		85CB253C294CB1AC00C10292 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
+		85CB253E29506AB500C10292 /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				85950D70294A004000A41012 /* MenuTVC.swift */,
 				85950D76294A317C00A41012 /* CardWithMealViewController.swift */,
 				85950D7F294B3BF900A41012 /* CreateFeedbackViewController.swift */,
+				85CB253E29506AB500C10292 /* ReviewsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				85950D73294A13E000A41012 /* meal.swift in Sources */,
 				85950D80294B3BF900A41012 /* CreateFeedbackViewController.swift in Sources */,
 				85950D75294A18A600A41012 /* Feedback.swift in Sources */,
+				85CB253F29506AB500C10292 /* ReviewsTableViewController.swift in Sources */,
 				85950D582949F51E00A41012 /* AppDelegate.swift in Sources */,
 				85950D71294A004000A41012 /* MenuTVC.swift in Sources */,
 				85950D7A294A720B00A41012 /* ReviewTableViewCell.swift in Sources */,

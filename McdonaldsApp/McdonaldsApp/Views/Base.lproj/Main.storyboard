@@ -129,16 +129,15 @@
                                                             <action selector="lookFeedbacksButton:" destination="tYX-ZR-EQZ" eventType="touchUpInside" id="2IJ-I3-iUf"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-lC-b8h">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-lC-b8h">
                                                         <rect key="frame" x="0.0" y="50" width="356" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="sEg-tg-eRP"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <color key="tintColor" red="1" green="0.792156862745098" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Leave feedback" cornerStyle="large" titleAlignment="center">
-                                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                                        </buttonConfiguration>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Leave feedback"/>
                                                         <connections>
                                                             <action selector="leaveFeedback:" destination="tYX-ZR-EQZ" eventType="touchUpInside" id="09K-5p-zOe"/>
                                                         </connections>
@@ -199,19 +198,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-le-7d5">
-                                <rect key="frame" x="36" y="75" width="2490" height="387"/>
+                                <rect key="frame" x="36" y="75" width="356" height="387"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please leave your review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wc-5q-3rv">
-                                        <rect key="frame" x="0.0" y="0.0" width="2490" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="356" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="409" translatesAutoresizingMaskIntoConstraints="NO" id="yar-QG-bhh">
-                                        <rect key="frame" x="0.0" y="72" width="2490" height="150"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yar-QG-bhh">
+                                        <rect key="frame" x="0.0" y="72" width="356" height="150"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-rZ-NeD">
-                                                <rect key="frame" x="0.0" y="0.0" width="2490" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="356" height="150"/>
                                                 <color key="backgroundColor" red="0.92897774581008796" green="0.93560148328433368" blue="0.95547269570707072" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="20v-Ua-fK8"/>
@@ -221,7 +220,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrV-Dm-xHX">
-                                                <rect key="frame" x="0.0" y="0.0" width="2490" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="356" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.058939513309999997" blue="0.1033872924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -229,7 +228,7 @@
                                         </subviews>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-rD-Enz">
-                                        <rect key="frame" x="0.0" y="264" width="2490" height="32"/>
+                                        <rect key="frame" x="0.0" y="264" width="356" height="32"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <segments>
                                             <segment title="⭐️"/>
@@ -241,7 +240,7 @@
                                         <color key="tintColor" red="0.1058823529" green="0.10536672919999999" blue="0.10536672919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7A-Hn-raR">
-                                        <rect key="frame" x="0.0" y="337" width="2490" height="50"/>
+                                        <rect key="frame" x="0.0" y="337" width="356" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="M0L-do-eV6"/>
                                         </constraints>
@@ -257,7 +256,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-cV-PLA">
-                                <rect key="frame" x="112" y="602" width="2339" height="102"/>
+                                <rect key="frame" x="112" y="602" width="205" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="TV1-vV-cRp"/>
                                     <constraint firstAttribute="width" constant="191" id="Ypn-JT-DaW"/>
@@ -277,18 +276,20 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="KrV-Dm-xHX" id="WNw-ze-jNz"/>
+                        <outlet property="feedbackTextView" destination="fhX-rZ-NeD" id="ZjP-ON-HB1"/>
                         <outlet property="mark" destination="bx0-rD-Enz" id="NgT-IH-3x2"/>
-                        <outlet property="textView" destination="fhX-rZ-NeD" id="gNa-Rx-ZIo"/>
+                        <outlet property="saveReviewButton" destination="a7A-Hn-raR" id="hnb-SF-4Oh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHB-ja-WfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3137.3831775700933" y="97.192224622030238"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Reviews Table View Controller-->
         <scene sceneID="l0n-Vq-tSw">
             <objects>
-                <tableViewController id="oZu-gi-wGd" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ReviewsTableViewController" id="oZu-gi-wGd" customClass="ReviewsTableViewController" customModule="McdonaldsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qFh-5L-Fmn">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

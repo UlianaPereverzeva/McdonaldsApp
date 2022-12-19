@@ -14,4 +14,17 @@ struct Feedback {
     
     var text: String
     var star: Double
+    
+    
+    var ratingBar: String{
+        String(repeating: "⭐️", count:Int(star.rounded(.up)))
+    }
+    
+    var dateString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale.current
+        return dateFormatter.string(from: date)
+    }
 }

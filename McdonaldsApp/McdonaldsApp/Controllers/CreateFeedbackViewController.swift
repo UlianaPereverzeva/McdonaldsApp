@@ -7,29 +7,45 @@
 
 import UIKit
 
-class CreateFeedbackViewController: UIViewController {
+protocol CreateFeedbackDelegate: AnyObject {
+    func didAddFeedback(_ feedback: Feedback, toMealAtIndex: IndexPath)
+}
 
-    @IBOutlet weak var textView: UITextView!
+class CreateFeedbackViewController: UIViewController, UITextViewDelegate {
+
+    @IBOutlet weak var feedbackTextView: UITextView!
     @IBOutlet weak var mark: UISegmentedControl!
+    @IBOutlet weak var saveReviewButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
     
+    weak var delegate: CreateFeedbackDelegate?
+    var indexInTable: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        feedbackTextView.delegate = self
+        
     }
     
 
     @IBAction func saveRview(_ sender: UIButton) {
+        let feedback = Feedback(text: feedbackTextView.text, star: Double(mark.selectedSegmentIndex + 1))
+        if let index = indexInTable {
+            self.delegate?.didAddFeedback(feedback, toMealAtIndex: index)
+        }
+        self.navigationController?.popToRootViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView == feedbackTextView {
+            let isLettersEnough = textView.text.count >= 10
+            saveReviewButton.isEnabled = isLettersEnough
+            errorLabel.isHidden = isLettersEnough
+            errorLabel.text = "You need to write more than 10 symbols"
+        }
+        return true
     }
-    */
 
 }

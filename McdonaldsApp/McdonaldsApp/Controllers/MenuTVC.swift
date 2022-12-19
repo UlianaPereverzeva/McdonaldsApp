@@ -74,9 +74,9 @@ class MenuTVC: UITableViewController {
    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            MealsData.shared.meals.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)}
+//        if editingStyle == .delete {
+//            MealsData.shared.meals.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)}
 //        } else if editingStyle == .insert {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
 //        }
@@ -116,8 +116,8 @@ class MenuTVC: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let currentMeal = MealsData.shared.meals.remove(at: fromIndexPath.row)
-        MealsData.shared.meals.insert(currentMeal, at: to.row)
+//        let currentMeal = MealsData.shared.meals.remove(at: fromIndexPath.row)
+//        MealsData.shared.meals.insert(currentMeal, at: to.row)
     }
     
 
@@ -145,7 +145,25 @@ class MenuTVC: UITableViewController {
         default:
             break
         }
+        vc.feedbackDelegate = self
+        vc.indexInTable = indexPath
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+}
+
+extension MenuTVC: CreateFeedbackDelegate {
+    func didAddFeedback(_ feedback: Feedback, toMealAtIndex: IndexPath) {
+        switch toMealAtIndex.section {
+        case 0:
+            MealsData.shared.menu.burgers[toMealAtIndex.row].feedback.append(feedback)
+        case 1:
+            MealsData.shared.menu.frenchFries[toMealAtIndex.row].feedback.append(feedback)
+        case 2:
+            MealsData.shared.menu.drinks[toMealAtIndex.row].feedback.append(feedback)
+        default:
+            break
+        }
+        tableView.reloadData()
+    }
 }
